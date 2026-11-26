@@ -1,0 +1,21 @@
+# Rider / IDE settings
+.idea/
+.vscode/
+*.iml
+
+# Local tool output
+tools/failed-downloads.txt
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Never commit credentials
+.env
+.env.*
+*.keystore
+*.jks
+*.pem
+*.key
+.claude/settings.local.json

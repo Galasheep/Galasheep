@@ -8,7 +8,8 @@ GalaSheep website (rebuilt from Wix)
 2. Double-click "2 - Preview site.bat"
    Opens the site at http://localhost:8080 in your browser. Close the black window to stop it.
 
-3. Upload: the "site" folder is the whole website. Upload that folder to Cloudflare Pages
-   (Workers & Pages > Create > Pages > Upload assets). The "tools" folder and these files are NOT part of the site.
+3. Publishing: the "site" folder is the whole website. Cloudflare Pages is connected to this
+   GitHub repository (build command: none, output directory: site), so every change merged
+   into main goes live automatically. The "tools" folder and these files are NOT part of the site.
 
 Old Wix addresses (like /copy-of-project-page/torch-royale) redirect to the new ones automatically (site\_redirects).
