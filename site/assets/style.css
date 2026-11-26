@@ -1,0 +1,147 @@
+/* GalaSheep portfolio - rebuilt from the Wix version (same colours, layout and type) */
+:root{
+  --yellow:#ffbc13; --teal:#38bd9d; --blue:#2c3997; --nav:#ebe7dd; --nav-on:#f9c730;
+  --beige:#f2efe9; --ink:#2f2e2e;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--beige);color:var(--blue);font:20px/1.35 "Open Sans",Arial,sans-serif;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,p{margin:0}
+
+/* header: yellow band with logo, teal stripe, blue menu bar */
+.top{position:relative;z-index:2;background:var(--blue);box-shadow:0 0 5px rgba(0,0,0,.5)}
+.sun{background:var(--yellow);height:190px;display:flex;justify-content:center}
+.sun img{width:183px;height:183px}
+.stripe{height:8px;background:var(--teal)}
+.menu{display:flex;justify-content:center;gap:9px;height:44px;align-items:center}
+.menu a{color:var(--nav);text-decoration:none;font-size:20px;padding:0 14px}
+.menu a.on,.menu a:hover{color:var(--nav-on)}
+.burger,.fab{display:none}
+
+main{padding-bottom:60px}
+.home-page main{background:#fff;padding-bottom:40px}
+.wrap{max-width:946px;margin:0 auto;padding:0 16px}
+
+/* home galleries - collage positions copied from the Wix gallery */
+.sec-title{font-size:26px;font-weight:700;line-height:36px;text-align:center;padding:12px 16px 9px}
+.sec-title+.gal{margin-top:0}
+.gal{position:relative;margin:0 80px}
+.gal+.sec-title{padding-top:51px;padding-bottom:20px}
+.tile{position:absolute;display:block;overflow:hidden;background:#eee;border-radius:12px;isolation:isolate}
+.tile img,.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.tile:hover img,.tile:hover video{transform:scale(1.06)}
+.tile iframe{position:absolute;left:50%;top:50%;border:0;pointer-events:none;transform:translate(-50%,-50%)}
+/* hover overlay like the Wix gallery: site blue at 70% with the title centred */
+.cap{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;
+  background:rgba(44,57,151,.7);color:#fff;font-size:26px;font-weight:700;line-height:1.2;opacity:0;transition:opacity .2s}
+.tile:hover .cap,.tile:focus-visible .cap{opacity:1}
+.tile:focus-visible .cap{opacity:1}
+.tile:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+
+/* project pages */
+.page{padding-top:0}
+.phead{position:relative;padding:26px 0 30px}
+.phead .lead{margin-top:6px;max-width:680px}
+.ptitle,.sec{font-size:26px;font-weight:700;line-height:36px}
+.sec{margin-top:40px}
+.lead p{font-size:20px;line-height:26.6px}
+.sec+.lead{margin:6px 0 24px}
+.phead .btn{position:absolute;right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-width:181px;height:40px;padding:0 6px;
+  background:var(--yellow);color:#fff;text-decoration:none;font:600 25px/1 Signika,"Open Sans",sans-serif;transition:background .2s}
+.btn:hover{background:var(--blue)}
+.embed{position:relative;aspect-ratio:16/9;margin:0 0 31px;background:#000}
+.embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.grid{display:grid;gap:10px;margin:0 0 20px}
+.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.row{display:flex;gap:10px;margin:0 0 20px}
+.ph{display:block;padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden;width:100%}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.full{margin:0 0 31px}
+.ph.full img{height:auto}
+.gifs{align-items:center}
+.ph.contain img{object-fit:contain;height:auto}
+.band{width:100vw;margin-left:calc(50% - 50vw);min-height:var(--bh);padding-top:var(--top)}
+.wvid{margin:0 auto;position:relative}
+.wvid canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wvid video[data-alpha]{opacity:0}
+.wvid video{display:block;width:100%;height:100%;object-fit:cover}
+.vgrid video{display:block;width:100%;height:auto}
+.vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;gap:40px 60px;margin:0 0 31px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:20;background:rgba(15,19,50,.92);display:flex;align-items:center;justify-content:center}
+.lb[hidden]{display:none}
+.lb img{max-width:90vw;max-height:88vh;object-fit:contain}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:48px;cursor:pointer;width:56px;height:56px}
+.lb-x{top:10px;right:14px}.lb-p{left:10px}.lb-n{right:10px}
+
+/* contact - positions measured on the Wix page */
+.c-top{text-align:center;padding:26px 16px 0}
+.c-top h1{font:800 32px/51px "Lexend Zetta","Arial Black",sans-serif;letter-spacing:-.02em;text-transform:uppercase}
+.c-top .intro{color:var(--ink);text-align:left;max-width:500px;margin:9px auto 0;font-size:20px;line-height:26.6px}
+.tools{position:relative;width:428px;max-width:100%;height:80px;margin:13px auto 50px}
+.tools figure{margin:0}
+.tools img{position:absolute;object-fit:cover}
+.tools figcaption{position:absolute;top:65px;width:79px;text-align:center;font-size:11px;line-height:15px}
+.c-band{background:#fff;text-align:center;padding:32px 16px 24px}
+.c-band h2{display:inline-block;font-size:22px;font-weight:700;line-height:30px;padding-bottom:4px;border-bottom:2px solid var(--yellow)}
+.c-band .social{margin-top:26px}
+.mail{display:block;width:90px;margin:10px auto 0}
+.mail img{width:90px;height:90px;object-fit:contain}
+.contact-page main{padding-bottom:198px}
+
+/* footer */
+.foot{padding:51px 16px 52px}
+.social{display:flex;justify-content:center;gap:27px}
+.foot .social{margin-left:-46px}
+.social a{display:block;width:43px;height:43px;transition:transform .2s}
+.social a:hover{transform:translateY(-3px)}
+.social svg{display:block;width:43px;height:43px}
+
+/* tablets */
+@media (max-width:800px){
+  .phead{min-height:0!important;display:flex;flex-direction:column;gap:10px;padding:24px 0 24px}
+  .phead .lead{margin-top:0}
+  .phead .btn{position:static;align-self:flex-start}
+  .foot .social{margin-left:0}
+  .c4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gifs{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .band{min-height:0;padding:var(--top) 0 0}
+}
+
+/* phones - like the Wix mobile site: burger menu, square two-column tiles, floating mail button */
+@media (max-width:640px){
+  body{font-size:17px}
+  .sun{height:150px;align-items:center}.sun img{width:130px;height:130px}
+  .stripe{height:6px}
+  .menu{display:none}
+  .top{padding-bottom:6px}
+  .burger{display:flex;flex-direction:column;justify-content:center;gap:5px;position:absolute;left:14px;top:14px;z-index:30;
+    width:50px;height:50px;border-radius:50%;border:0;background:var(--blue);padding:0 14px;cursor:pointer}
+  .burger span{display:block;height:2px;background:var(--yellow);border-radius:2px}
+  .menu.open{display:flex;position:fixed;inset:0;z-index:25;flex-direction:column;gap:28px;height:auto;background:var(--blue)}
+  .menu.open a{font-size:28px}
+  .fab{display:flex;align-items:center;justify-content:center;position:fixed;right:16px;bottom:16px;z-index:15;
+    width:56px;height:56px;border-radius:50%;background:var(--yellow);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+  .fab svg{width:28px;height:28px}
+  .sec-title,.gal+.sec-title{padding:14px 16px 10px;font-size:24px}
+  .gal{aspect-ratio:auto!important;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:4px}
+  .tile{position:relative;left:auto!important;top:auto!important;width:auto!important;height:auto!important;aspect-ratio:1;border-radius:8px}
+  .cap{display:none}
+  .ptitle,.sec{font-size:22px;line-height:30px}
+  .lead p{font-size:17px;line-height:24px}
+  .row{flex-direction:column}
+  .row .ph{flex:none!important;aspect-ratio:auto!important}
+  .row .ph img{height:auto}
+  .vgrid{gap:16px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .btn{font-size:20px;min-width:0}
+  .c-top h1{font-size:24px}
+  .c-top .intro{font-size:17px}
+  .tools{transform:scale(.8);transform-origin:top center;margin-bottom:30px}
+  .contact-page main{padding-bottom:40px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
